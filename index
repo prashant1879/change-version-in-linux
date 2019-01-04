@@ -1,0 +1,19 @@
+****************************************
+// Take all database backup. ( optional ) 
+Step 1 : mysqldump --lock-all-tables -u root -p --all-databases > dump.sql
+
+//Remove your previous MySQL server.
+Step 2 : sudo apt-get purge mysql-server*
+
+//Install new version of MySQL server right now I set 5.6
+Setp 3 : sudo apt-get install mysql-server-5.6
+
+//Follow instruction on window to setup new MySQL username & password. 
+
+//Restart webserver. 
+Step 4 : service apache2 restart
+
+//Restore your old database backup. ( optional ) 
+Step 5 : mysql -u root -p < dump.sql
+
+****************************************
