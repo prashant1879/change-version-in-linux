@@ -1,4 +1,7 @@
-****************************************
+*********************************************************
+Description : Change MySQL version 5.5 to 5.6 or 5.7. 
+*********************************************************
+
 // Take all database backup. ( optional ) 
 Step 1 : mysqldump --lock-all-tables -u root -p --all-databases > dump.sql
 
@@ -16,4 +19,4 @@ Step 4 : service apache2 restart
 //Restore your old database backup. ( optional ) 
 Step 5 : mysql -u root -p < dump.sql
 
-****************************************
+*********************************************************
